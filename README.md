@@ -6,11 +6,11 @@ The using Microsoft.Extensions.Logging is commented out because it would require
 The Akka Logging system is not suiteable to use, because it would generate Task on the Scheduler itself.
 
 Priorities:
-High => all work items will be executed until none left
-Normal => work items will be executed until max-work
-Low => when work was done then single work items will be executed
+1) High => all work items will be executed until none left
+2) Normal => work items will be executed until max-work
+3) Low => when work was done then single work items will be executed
         else work items will be executed until max-work
-Idle => A single work item will be executed only when no work was done before
+4) Idle => A single work item will be executed only when no work was done before
 
 ### Shortcomings
 
